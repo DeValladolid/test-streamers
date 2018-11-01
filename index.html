@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fortnite Countdown Clock</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/stream.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@SrDrabx">
+      <meta name="twitter:title" content="Fortnitemares event">
+      <meta name="twitter:description" content="Countdown for the Fortnitemares event.">
+      <meta name="twitter:image" content="http://fortnitemares.fortnite-br.com/css/bg.jpg">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71246365-19"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71246365-19');
+</script>
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+}
+</script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "81716ecb-bc9c-4b47-a0da-d9d5a0743acd",
+    });
+  });
+</script>
+
+</head>
+
+<body>
+  <!-- Starting -->
+  <h1>Fortnitemares event in...</h1>
+
+  <!-- Started
+  <h1>The event has started</h1>
+  <div id="youtube-live">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JUK85GjnONQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+-->
+  <!-- Cover clock-->
+
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+<h4> This Sunday, November 4th we will have a live event inside the Fortnite Battle Royale, </br>
+  coinciding with the end of the Fortnitemares event. </h4>
+</br>
+<!--
+<div class="fortnite-button">
+  <a href="https://cross.fortnite-br.com/season-6-update/" class="button"><span>Season 6</span></a>
+</div>
+-->
+  <!--
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="css/cube.jpg" class="fullscreen-bg__video">
+
+        <source src="css/bg.webm" type="video/webm">
+        <source src="vid/cube-bg.mp4" type="video/mp4">
+
+    </video>
+</div>
+-->
+    <script  src="js/index.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<h1>Featured Streamers</h1>
+
+  <div id="stream">
+    <div>
+      <h4>DAKOTAZ</h4>
+        <div id="twitch-embed-dakotaz"></div>
+    </div>
+    <div>
+      <h4>NINJA</h4>
+        <div id="twitch-embed-ninja"></div>
+    </div>
+
+  </div>
+
+  <div id="stream">
+    <div>
+      <h4>TFUE</h4>
+        <div id="twitch-embed-tfue"></div>
+    </div>
+    <div>
+      <h4>TimTheTatman</h4>
+        <div id="twitch-embed-timthetatman"></div>
+    </div>
+
+  </div>
+
+<script type="text/javascript">
+      new Twitch.Embed("twitch-embed-dakotaz", {
+        width: 570,
+        height: 320,
+        channel: "dakotaz",
+        layout: "video",
+        autoplay: false
+      });
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+    <script type="text/javascript">
+          new Twitch.Embed("twitch-embed-ninja", {
+            width: 570,
+            height: 320,
+            channel: "ninja",
+            layout: "video",
+            autoplay: false
+          });
+          embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+        </script>
+
+        <script type="text/javascript">
+              new Twitch.Embed("twitch-embed-tfue", {
+                width: 570,
+                height: 320,
+                channel: "tfue",
+                layout: "video",
+                autoplay: false
+              });
+              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                var player = embed.getPlayer();
+                player.play();
+              });
+            </script>
+            <script type="text/javascript">
+                  new Twitch.Embed("twitch-embed-timthetatman", {
+                    width: 570,
+                    height: 320,
+                    channel: "timthetatman",
+                    layout: "video",
+                    autoplay: false
+                  });
+                  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                    var player = embed.getPlayer();
+                    player.play();
+                  });
+                </script>
+
+</body>
+<footer style="padding-top: 100px;">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- displey -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5821873603989488"
+     data-ad-slot="6582700391"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</footer>
+
+</html>
