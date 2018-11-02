@@ -120,14 +120,14 @@ body {
 }
 
 @media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
+  #stream {
     width: 100%;
     height: auto;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
+  .#stream {
     width: auto;
     height: 100%;
   }
@@ -217,7 +217,7 @@ a.button {
 #stream{
 	font-family: fortnite;
 	color: #fff;
-	display: inline-block;
+	display: block;
 
 }
 
@@ -234,3 +234,132 @@ a.button {
 	border-radius: 3px;
 
 }
+
+#stream div > h4{
+  background: url(./icon.png) no-repeat;
+  display: inline-block;
+  font-size: 24px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  width: 258px;
+  height: 61px;
+  padding-top: 26px;
+  background-position: 0 -635px;
+  }
+
+  iframe {
+    max-width: 100%;
+    height: 320px;
+}
+
+  /*
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+  */
+
+  @media (min-width: 1281px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    //CSS
+
+  }
+
+  .embed-responsive {
+  	position: relative;
+  	display: block;
+  	width: 100%;
+  	padding: 0;
+  	overflow: hidden
+  }
+
+  .embed-responsive::before {
+  	display: block;
+  	content: ""
+  }
+
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive embed,
+  .embed-responsive iframe,
+  .embed-responsive object,
+  .embed-responsive video {
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	border: 0
+  }
+
+  .embed-responsive-21by9::before {
+  	padding-top: 42.857143%
+  }
+
+  .embed-responsive-16by9::before {
+  	padding-top: 56.25%
+  }
+
+  .embed-responsive-4by3::before {
+  	padding-top: 75%
+  }
+
+  .embed-responsive-1by1::before {
+  	padding-top: 100%
+  }

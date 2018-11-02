@@ -1,113 +1,322 @@
-.slick-slider {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent
+@font-face {
+    font-family: burbank-small;
+    src: url(fonts/Burbank-small.woff);
+ }
+ @font-face {
+     font-family: fortnite;
+     src: url(fonts/Burbank-Normal.woff);
+  }
+
+.a-test,.logo-btn,.logo-btn2{
+   -webkit-animation:fadeInLeft 1s .2s ease both;  animation:fadeInLeft 1s .2s ease both;}
+html{
+ background-size: cover;
+ background-color: #512DA8;
+ height: 100%;
+ padding-top: 262.5;
+ border-top-width: 0px;
 }
 
-.slick-list,.slick-slider {
-    position: relative;
-    display: block
+
+
+#bg {
+ position: fixed;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+}
+#bg img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+ min-width: 50%;
+ min-height: 50%;
 }
 
-.slick-list {
-    overflow: hidden;
-    margin: 0;
-    padding: 0
+body{
+ padding-top: 100px;
+ text-align: center;
+
+ font-family: fortnite;
+
+ font-weight: 100;
 }
 
-.slick-list:focus {
-    outline: none
+h1{
+ color: #FFF;
+ font-weight: 100;
+ font-size: 3.5em;
+ margin: 25px 0px 20px;
+ text-transform: uppercase;
+ text-shadow: 2px 2px 5px black;
+ font-style: italic;
 }
 
-.slick-list.dragging {
-    cursor: pointer;
-    cursor: hand
+p{
+ font-family: burbank-small;
+ color: #fff;
+ font-size: 4em;
+ text-shadow: 2px 2px 5px black;
 }
 
-.slick-slider .slick-list,.slick-slider .slick-track {
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0)
+h4{
+ font-family: burbank-small;
+ color: #fff;
+ font-size: 1.5em;
+ text-shadow: 2px 2px 5px black;
 }
 
-.slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+#clockdiv{
+ font-family: fortnite;
+ color: #fff;
+ display: inline-block;
+ font-weight: 100;
+ text-align: center;
+ font-size: 30px;
+ padding-bottom: 40px;
 }
 
-.slick-track:after,.slick-track:before {
-    display: table;
-    content: ""
+#clockdiv > div{
+ padding: 10px;
+ border-radius: 3px;
+ background: #512DA8;
+
+ display: inline-block;
 }
 
-.slick-track:after {
-    clear: both
+#clockdiv div > span{
+ padding: 15px;
+ border-radius: 3px;
+ background: #673AB7;
+ display: inline-block;
+ background-image: url(bg.png);
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 
-.slick-loading .slick-track {
-    visibility: hidden
+.smalltext{
+ padding-top: 5px;
+ font-size: 16px;
 }
 
-.slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px
+body {
+
 }
 
-[dir=rtl] .slick-slide {
-    float: right
+.fullscreen-bg {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: -100;
 }
 
-.slick-slide img {
-    display: block
+.fullscreen-bg__video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
 
-.slick-slide.slick-loading img {
-    display: none
+@media (min-aspect-ratio: 16/9) {
+ #stream {
+   width: 100%;
+   height: auto;
+ }
 }
 
-.slick-slide.dragging img {
-    pointer-events: none
+@media (max-aspect-ratio: 16/9) {
+ .#stream {
+   width: auto;
+   height: 100%;
+ }
 }
 
-.slick-initialized .slick-slide {
-    display: block
+.fortnite-btn {
+ position: relative;
+ font-size: 1.75em;
+ color: #fff;
+ margin: 0 auto;
+ background: transparent;
+ color: #000;
+ font-weight: 900;
+ font-family: fortnite;
+ text-transform: uppercase;
+ width: 250px;
+ padding: 18px 0;
+ text-align: center;
+ line-height: 1;
+ cursor: pointer;
 }
 
-.slick-loading .slick-slide {
-    visibility: hidden
+.fortnite-btn:hover:after {
+ background-color: #eeea4c;
 }
 
-.slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent
+.fortnite-btn span {
+ position: relative;
+ z-index: 100;
+  background-color: #f0ed63;
 }
 
-.slick-arrow.slick-hidden {
-    display: none
+.fortnite-btn:after {
+ content: "";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 65px;
+ transition: background-color .3s ease-in-out;
+ box-shadow: 0 4px 12px -4px rgba(0,0,0,.5);
+ animation: jelly 6s ease-in-out infinite;
+ transform-origin: 50% 50% 20px;
+ background-color: #f0ed63;
 }
 
-.ko .fortnite-wrapper:not(.switch) .feature-video-container .feature-video-detail .feature-stream-title,.ko .fortnite-wrapper:not(.switch) .stream-card-container .stream-card-info a .video-title {
-    font-weight: 700
+a:link {
+ color: black;
 }
 
-.fortnite-stream-overlay {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: fixed
+a {
+ text-decoration: none;
 }
+
+a.button {
+ background: url(./icon.png) no-repeat;
+ display: block;
+ font-size: 24px;
+ color: #1d1d1d;
+ text-align: center;
+ line-height: 26px;
+ font-weight: bold;
+ position: absolute;
+ text-transform: uppercase;
+ width: 258px;
+ height: 61px;
+ padding-top: 26px;
+ background-position: 0 -635px;
+}
+
+.fortnite-button {
+ font-size: 1.75em;
+ color: #fff;
+ margin: 0 auto;
+ background: transparent;
+ color: #000;
+ font-weight: 900;
+ font-family: fortnite;
+ text-transform: uppercase;
+ width: 250px;
+ text-align: center;
+ line-height: 1;
+ cursor: pointer;
+}
+
+#stream{
+ font-family: fortnite;
+ color: #fff;
+ display: block;
+
+}
+
+#stream > div{
+ padding: 10px;
+ border-radius: 3px;
+
+
+ display: inline-block;
+}
+
+#stream div > span{
+ padding: 15px;
+ border-radius: 3px;
+
+}
+
+#stream div > h4{
+ background: url(./icon.png) no-repeat;
+ display: inline-block;
+ font-size: 24px;
+ text-align: center;
+ line-height: 26px;
+ font-weight: bold;
+ position: relative;
+ text-transform: uppercase;
+ width: 258px;
+ height: 61px;
+ padding-top: 26px;
+ background-position: 0 -635px;
+
+ /*
+   ##Device = Desktops
+   ##Screen = 1281px to higher resolution desktops
+ */
+
+ @media (min-width: 1281px) {
+
+   //CSS
+
+ }
+
+ /*
+   ##Device = Laptops, Desktops
+   ##Screen = B/w 1025px to 1280px
+ */
+
+ @media (min-width: 1025px) and (max-width: 1280px) {
+
+   //CSS
+
+ }
+
+ /*
+   ##Device = Tablets, Ipads (portrait)
+   ##Screen = B/w 768px to 1024px
+ */
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+
+   //CSS
+
+ }
+
+ /*
+   ##Device = Tablets, Ipads (landscape)
+   ##Screen = B/w 768px to 1024px
+ */
+
+ @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+   //CSS
+
+ }
+
+ /*
+   ##Device = Low Resolution Tablets, Mobiles (Landscape)
+   ##Screen = B/w 481px to 767px
+ */
+
+ @media (min-width: 481px) and (max-width: 767px) {
+
+   //CSS
+
+ }
+
+ /*
+   ##Device = Most of the Smartphones Mobiles (Portrait)
+   ##Screen = B/w 320px to 479px
+ */
+
+ @media (min-width: 320px) and (max-width: 480px) {
+
+   //CSS
+
+ }
